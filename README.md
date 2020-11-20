@@ -6,6 +6,7 @@ These are the exercise files used for [Full Robot Operating System (ROS) Trainin
 The course outline can be found in 
 
 https://www.tertiarycourses.com.sg/full-robot-operating-system-ros-training.html
+https://www.tertiarycourses.com.my/full-robot-operating-system-ros-training-malaysia.html
 
 <h2>Day 1 - ROS 2 Fundamental</h2>
 <p><strong>Topic 1 Introduction to ROS 2</strong></p>
