@@ -1,21 +1,18 @@
-#! /usr/bin/env python
-
+#!/usr/bin/env python
 import rospy
-
+import actionlib
 from actionlib import SimpleActionServer
+from my_robotics.msg import my_actionAction,my_actionGoal,my_actionResult,my_actionFeedback
 
-from beginner_tutorials.msg import FibonacciFeedback
-from beginner_tutorials.msg import FibonacciResult
-from beginner_tutorials.msg import FibonacciAction
 
 class FibonacciActionServer(object):
     # create messages that are used to publish feedback/result
-    feedback = FibonacciFeedback()
-    result = FibonacciResult()
+    feedback = my_actionFeedback()
+    result = my_actionResult()
 
     def __init__(self, name):
         self.action_name = name
-        self.action_server = SimpleActionServer(self.action_name, FibonacciAction, execute_cb=self.execute_cb, auto_start = False)
+        self.action_server = SimpleActionServer(self.action_name, my_actionAction, execute_cb=self.execute_cb, auto_start = False)
         self.action_server.start()
       
     def execute_cb(self, goal):

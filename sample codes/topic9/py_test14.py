@@ -1,30 +1,20 @@
-#! /usr/bin/env python
-
-from __future__ import print_function
+#!/usr/bin/env python
 import rospy
-
-
-# Brings in the SimpleActionClient
 import actionlib
+from my_robotics.msg import my_actionAction,my_actionGoal,my_actionResult,my_actionFeedback
 import sys
-
-# Brings in the messages used by the fibonacci action, including the
-# goal message and the result message.
-from beginner_tutorials.msg import FibonacciAction
-from beginner_tutorials.msg import FibonacciGoal
-
 
 def fibonacci_client():
     # Creates the SimpleActionClient, passing the type of the action
     # (FibonacciAction) to the constructor.
-    client = actionlib.SimpleActionClient('fibonacci', FibonacciAction)
+    client = actionlib.SimpleActionClient('fibonacci', my_actionAction)
 
     # Waits until the action server has started up and started
     # listening for goals.
     client.wait_for_server()
 
     # Creates a goal to send to the action server.
-    goal = FibonacciGoal(order=20)
+    goal = my_actionGoal(order=20)
 
     # Sends the goal to the action server.
     client.send_goal(goal)
@@ -43,4 +33,4 @@ if __name__ == '__main__':
         result = fibonacci_client()
         print("Result:", ', '.join([str(n) for n in result.sequence]))
     except rospy.ROSInterruptException:
-        print("program interrupted before completion", file=sys.stderr)
+       pass
