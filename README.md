@@ -1,5 +1,5 @@
 # Full Robot Operating System (ROS) Training
-## by [Tertiary Infotech Pte. Ltd](https://www.tertiarycourses.com.sg/)
+## by [Tertiary Courses](https://www.tertiarycourses.com.sg/)
 
 These are the exercise files used for [Full Robot Operating System (ROS) Training](https://www.tertiarycourses.com.sg/full-robot-operating-system-ros-training.html) course. 
 
