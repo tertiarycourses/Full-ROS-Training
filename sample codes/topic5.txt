@@ -1,0 +1,9 @@
+$ sudo apt-get install ros-kinetic-turtle-tf2 ros-kinetic-tf2-tools ros-kinetic-tf
+(terminal 1) $ roslaunch turtle_tf2 turtle_tf2_demo.launch
+(terminal 2) $ rosrun turtlesim turtlesim_teleop_key
+$ rviz
+
+$ roslaunch <your package name> display.launch model:='visual.urdf'
+
+$ xacro --inorder robot1.xacro  > robot1.urdf
+$ roslaunch <your package name> display.launch model:='robot1.urdf'

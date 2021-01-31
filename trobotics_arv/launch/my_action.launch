@@ -1,0 +1,6 @@
+<launch>
+
+<node pkg="my_robotics" type="py_test2" name="py_test2"/>
+
+
+</launch>
